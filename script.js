@@ -9,3 +9,17 @@ function checkPassword() {
     document.getElementById("error").textContent = "Неверный пароль!";
   }
 }
+function redirectToPage(event){
+  event.preventDefault();
+  var selectedUrl = document.getElementById("position").value;
+  if(selectedUrl) {
+    window.location.href = selectedUrl;
+  }else{
+    alert("Пожалуйста, выберите должность.");
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  var form=document.getElementById("positionForm");
+  form.addEventListener('submit',redirectToPage);
+})
