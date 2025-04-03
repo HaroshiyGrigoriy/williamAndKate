@@ -1,3 +1,30 @@
+.header{
+display: flex;
+  height: 70px;
+  position: relative;
+  width: 100%;
+  background:#cc232373; 
+  justify-content: center;
+  align-items: center;
+}
+.header-container{
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav-toggle {x: ;e
+  position: absolute;
+  right: 20px;                         
+  background: none;                     
+  border: none;                        
+  font-size: 28px;                      
+  color: #fff;                         
+  cursor: pointer;
+}
 body {
   margin: 0;
   padding: 0;
@@ -8,21 +35,19 @@ body {
 }
 
 .logo {
-  display: block;
   margin: 20px auto;
-  max-width: 200px;
-  height: auto;
+  max-width: 70px;
 }
+
 
 .overlay {
   position: absolute;
-  top: 600px; /* <-- подбираешь вручную, пока не окажется под вывеской */
+  top: 50%; 
   left: 50%;
   transform: translateX(-50%);
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(90, 16, 16, 0.6);
   padding: 40px 20px;
-  width: 90%;
-  max-width: 700px;
+  width: 100%;
   border-radius: 17px;
   text-align: center;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
