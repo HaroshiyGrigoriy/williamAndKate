@@ -17,4 +17,21 @@ function checkPassword() {
     }
   });
 }
+<<<<<<< HEAD
 
+=======
+function redirectToPage(event){
+  event.preventDefault();
+  var selectedUrl = document.getElementById("position").value;
+  if(selectedUrl) {
+    window.location.href = selectedUrl;
+  }else{
+    alert("Пожалуйста, выберите должность.");
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  var form=document.getElementById("positionForm");
+  form.addEventListener('submit',redirectToPage);
+})
+>>>>>>> 4126f8e44e52d818eb31e634ac73fe2c12fed5cb
