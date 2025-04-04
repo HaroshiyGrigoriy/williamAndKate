@@ -33,3 +33,16 @@ document.addEventListener("DOMContentLoaded", function() {
   form.addEventListener('submit',redirectToPage);
 })
 
+function initSideBarToggle(){
+  const navToggel=document.querySelector('.nav-toggle');
+  const sideBar=document.getElementById('sidebar');
+if(!navToggel || !sideBar) {
+  console.warn('navToggle или sideBar не найдены' );
+  return;
+}
+navToggel.addEventListener('click',
+  () => { sideBar.classList.toggle('sidebar--open');
+  });
+}
+  document.addEventListener('DOMContentLoaded',
+    () => { initSideBarToggle();});

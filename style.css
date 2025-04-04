@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .header{
 display: flex;
   height: 70px;
@@ -26,6 +31,8 @@ display: flex;
   cursor: pointer;
 }
 body {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
   background: url(images/williamNight.jpg) no-repeat center top fixed;
@@ -33,12 +40,36 @@ body {
   font-family: Arial, sans-serif;
   color: white;
 }
+.body--shift {
+  margin-left: 240px; 
+  transition: margin-left 0.3s ease;
+}
 
 .logo {
   margin: 20px auto;
   max-width: 70px;
 }
-
+.sidebar{
+  position: fixed;
+  top: 0;
+  right: -240px;
+  transition: right 0.3s ease;
+  overflow-y: auto;
+}
+.sidebar--open{
+right: 0;
+}
+.sidebar_nav ul{
+  list-style: none;
+}
+.sidebar_nav li {
+  margin-bottom: 10px;
+}
+.sidebar_nav a{
+  text-decoration: none;
+  color: bisque;
+  font-size: 16px;
+}
 
 .overlay {
   position: absolute;
@@ -72,14 +103,14 @@ button {
   padding: 10px 20px;
   font-size: 16px;
   border: none;
-  background-color: #f8b400;
+  background-color: #e43a34cf;
   color: black;
   border-radius: 5px;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #ffaa00;
+  background-color: #9B2F2C;
 }
 
 .error-message {
@@ -92,4 +123,13 @@ button:hover {
     top: 220px; /* или подбери точное значение вручную */
     padding: 20px;
   }
+}
+p{
+  text-align: justify;
+  font-size: 19px;
+  color: #f7b5aa;
+}
+h1{
+  font-size: 35px;
+  color: #e4ec8e;
 }
